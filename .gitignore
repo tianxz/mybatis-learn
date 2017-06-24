@@ -1,0 +1,48 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IDEA #
+.idea/
+*.iml
+classes/
+
+# Gradle #
+.gradle/
+gradle/
+build
+build/
+jar.lib/
+gradlew
+gradlew.bat
+
+# out #
+.out/
+.lib/
+
+# svn #
+.svn/
+
+# JRebel #
+rebel.xml
+rebel-remote.xml
+temp.txt
+
+# 其它 #
+META-INF
+velocity.log*
+deploy/
+lobs/cas/deploy/
+D:
+E:
+C:
+F:

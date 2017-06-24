@@ -1,0 +1,61 @@
+server:
+  address: localhost
+  port: 8088
+icss:
+  debug: false
+  sso:
+    ##  单点登录页面
+    url: http://ics.chinasoftosg.com
+  web:
+    ## 前端绝对路径, 注意与本地一致
+    path: E:\Code\CAM\04code\cam-web
+logging:
+  path: D:/logs/cam/
+  level: !!map
+    com.vinci.mybatisLearn: debug
+    org.mybatis: debug
+#    org.activiti: debug
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations:
+    - classpath*:ibatis/mysql/**/*.xml
+  type-handlers-package: com.icss.it.cam.root.handler
+spring:
+    datasource:
+      mysql:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/mybaits.learn?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Hongkong&useSSL=false
+        username: root
+        password: root
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 6000
+        timeBetweenEvictionRunsMillis: 6000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+      postgresql:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/mysql.learn.postgresql?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Hongkong&useSSL=false
+        username: root
+        password: root
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 6000
+        timeBetweenEvictionRunsMillis: 6000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20

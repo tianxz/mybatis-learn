@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vinci.mybatisLearn.dao.postgresql.PostgresqlHeroDao">
+    <insert id="insertUserInfo" parameterType="com.vinci.mybatisLearn.domain.UserInfo">
+        INSERT INTO USER_INFO(ID, LOB_NUMBER, EMAIL_ADDRESS, TEL_NUMBER, PHONE_NUMBER)
+        VALUES(#{id}, #{lobNumber}, #{emailAddress}, #{telNumber}, #{phoneNumber});
+    </insert>
+
+    <select id="queryUserInfo" resultType="com.vinci.mybatisLearn.domain.UserInfo">
+        SELECT * FROM USER_INFO;
+    </select>
+</mapper>
