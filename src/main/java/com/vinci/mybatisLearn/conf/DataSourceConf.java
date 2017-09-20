@@ -1,5 +1,6 @@
 package com.vinci.mybatisLearn.conf;
 
+import com.vinci.mybatisLearn.jdbc.IcssDataSource;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -37,5 +38,10 @@ public class DataSourceConf {
     @ConfigurationProperties("spring.datasource.postgresql")
     public DataSource dataSource2() {
         return dataSourceProperties2().initializeDataSourceBuilder().build();
+    }
+
+    @Bean
+    public DataSource dataSource3() {
+        return new IcssDataSource();
     }
 }

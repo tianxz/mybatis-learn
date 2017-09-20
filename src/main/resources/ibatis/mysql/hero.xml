@@ -9,6 +9,6 @@
     </insert>
 
     <select id="queryUserInfo" resultType="com.vinci.mybatisLearn.domain.UserInfo">
-        SELECT * FROM USER_INFO;
+        SELECT * FROM USER_INFO
     </select>
 </mapper>
