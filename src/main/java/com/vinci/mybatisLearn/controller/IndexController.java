@@ -53,7 +53,7 @@ public class IndexController {
     }
 
     @GetMapping("/{dataSourceKey}")
-    public List<UserInfo> getUsers(@PathVariable("dataSourceKey") String dataSourceKey) {
+    public Page getUsers(@PathVariable("dataSourceKey") String dataSourceKey) {
         if (dataSourcePropertiesMap.containsKey(dataSourceKey)) {
             httpSession.setAttribute("data-source-key", dataSourcePropertiesMap.get(dataSourceKey));
 
